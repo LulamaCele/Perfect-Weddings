@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: montserrat, sans-serif;
+    /* margin: 0;
+    padding: 0 50px; */
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: white ;
+    position: fixed;
+    z-index: 1;
+}
+
+label.logo{
+    float: left;
+    font-size: 30px;
+    font-style: italic;
+    line-height: 80px;
+    padding-left: 50px;
+}
+
+nav ul{
+    float: right;
+    padding-right: 50px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    
+}
+
+nav ul li a{
+    color: black;
+    font-size: 20px;
+    padding: 7px 10px;
+    border-radius: 10%;
+}
+
+a:hover,a.active{
+    background: blanchedalmond;
+    transition: .5s;
+}
+
+.checkbtn{
+    width: 16px;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 25px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+
+    .checkbtn{
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: burlywood;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 2;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    a:hover, a.active{
+        background: none;
+        color: blanchedalmond;
+        transition: .5s;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+/* main section with couples and textimonials */
+
+.container-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 90px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-2, .container-3, .container-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.testimonial{
+    padding: 30px;
+}
+
+.names{
+    margin-bottom: 30px;
+}
+
+p{
+    line-height: 1.5;
+}
+
+
+.couple img{
+    width: 100%;
+    padding: 30px;
+}
+
+/* footer */
+/* Footer */
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.address, .contact-details {
+    border-right: 1px solid burlywood;
+}
+
+
+footer{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 30px;
+}
+
+.contact-details, .copyright{
+    padding-left: 40px;
+}
+
+button{
+    width: 200px;
+    margin-left: 50px;
+    color: black;
+    background-color: white;
+    font-style: italic;
+    border: 1px solid burlywood;
+}
+
+button:hover{
+    background-color: blanchedalmond;
+}
+
+/* smartphone responsiveness */
+@media screen and (max-width:600px) {
+    .container-1 , .container-3{
+        display: block;
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+    }
+   
+    .container-2, .container-4{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-2, .container-3, .container-4{
+        padding-top: 0px;
+    }
+
+    .testimonial{
+        padding: 20px;
+    }
+    
+    .names{
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .couple img{
+        width: 100%;
+        padding: 10px 20px 20px 20px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .contact-details, .copyright{
+        padding-left: 0px;
+    }
+
+    .address, .contact-details{
+        margin-bottom: 10px;
+    }
+
+    button{
+        margin: 20px auto;
+        padding: 10px 10px;
+    }
+
+    div#testimonial {order: 1;}
+    div#couple {order: 2;}
+}
+
+/* Tablet responsiveness */
+@media  screen and (min-width: 601px ) and (max-width:850px) {
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .contact-details, .copyright{
+        padding-left: 0px;
+    }
+
+    .address, .contact-details{
+        margin-bottom: 10px;
+    }
+
+    button{
+        margin: 20px auto;
+        padding: 10px 10px;
+    }
+}
+
+
+

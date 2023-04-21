@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: montserrat, sans-serif;
+    /* margin: 0;
+    padding: 0 50px; */
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: white ;
+    position: fixed;
+    z-index: 1;
+}
+
+label.logo{
+    float: left;
+    font-size: 30px;
+    font-style: italic;
+    line-height: 80px;
+    padding-left: 50px;
+}
+
+nav ul{
+    float: right;
+    padding-right: 50px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    
+}
+
+nav ul li a{
+    color: black;
+    font-size: 20px;
+    padding: 7px 10px;
+    border-radius: 10%;
+}
+
+a:hover,a.active{
+    background: blanchedalmond;
+    transition: .5s;
+}
+
+.checkbtn{
+    width: 16px;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 25px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+
+    .checkbtn{
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: burlywood;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 2;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    a:hover, a.active{
+        background: none;
+        color: blanchedalmond;
+        transition: .5s;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+/* contact section */
+.contact-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 130px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 60px;
+}
+
+.contact img{
+    width: 80%;
+}
+
+.big-letter{
+    font-size: 50px;
+    font-style: italic;
+}
+
+.section-head{
+    font-size: 25px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.address{
+    margin-bottom: 25px;
+}
+
+.mail{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.email-us{
+    padding: 90px;
+}
+
+form{
+    border: solid 1px burlywood;
+    /* padding: 30px; */
+}
+
+#full-name, #email{
+    display: inline-block;
+    height: 40px;
+    margin-top: 24px;
+}
+
+#full-name{
+    margin-right:24px;
+}
+
+.form-div{
+    width: 80%;
+    margin: auto;
+}
+
+
+#subject{
+    display: block;
+    width: 80%;
+    height: 40px;
+    margin: 16px auto;
+}
+
+#message{
+    display: block;
+    width: 80%;
+    margin: auto;
+    height: 100px;
+}
+
+#full-name, #email, #subject, #message{
+    border: none;
+    border-bottom: 1px solid burlywood;
+}
+
+.submit-btn{
+    display: block;
+    margin: 16px auto;
+    
+}
+
+/* Footer */
+/* Footer */
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+
+footer{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 30px;
+}
+
+.contact-detailz, .copyright{
+    padding-left: 40px;
+}
+
+button{
+    width: 200px;
+    margin-left: 50px;
+    color: black;
+    background-color: white;
+    font-style: italic;
+    border: 1px solid burlywood;
+}
+
+button:hover{
+    background-color: blanchedalmond;
+}
+
+/* smartphone responsiveness */
+@media screen and (max-width: 600px) {
+    .contact-details{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 80px;
+        padding-left: 0;
+        padding-right: 0;
+        width: 80%;
+        margin: 0;
+        margin: 0 auto;
+    }
+
+    .contact-details img{
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .big-letter{
+        font-size: 30px;
+    }
+
+    .contact-details .section-head{
+        font-size: 18px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .address{
+        margin: 15px auto;
+    }
+
+    .numbers{
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .mail{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* changing the order of the html div elements */
+    div#email-us{order: 2;}
+    div#contact-us{order: 1;}
+
+    .email-us{
+        padding: 0;
+        margin: 30px auto 15px auto;
+    }
+
+    .contact-us .section-head{
+        padding: 0;
+        margin: 30px auto 10px auto;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .contact-us p{
+        text-align: center;
+    }
+
+
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .contact-detailz, .copyright{
+        padding-left: 0px;
+    }
+
+    .address, .contact-detailz{
+        margin-bottom: 10px;
+    }
+
+    button{
+        margin: 20px auto;
+        padding: 10px 10px;
+    }
+}
+
+/* Tablet responsiveness */
+@media  screen and (min-width: 601px ) and (max-width:850px) {
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .contact-detailz, .copyright{
+        padding-left: 0px;
+    }
+
+    .address, .contact-detailz{
+        margin-bottom: 10px;
+    }
+
+    button{
+        margin: 20px auto;
+        padding: 10px 10px;
+    }
+}

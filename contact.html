@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="script.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <img  src="images/bars-solid.svg" alt="menu-bar">
+        </label>
+        <a href="index.html"><label class="logo">Perfect Weddings</label></a>
+        <ul>
+            <!-- <li><a class="nav-link " href="#About">About</a></li> -->
+            <li><a class="nav-link" href="services.html" >Services</a></li>
+            <li><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+            <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="contact">
+        <div class="contact-details">
+            <p class="section-head"><span class="big-letter">C</span>ontact Us</p>
+            <div class="address">
+                500 Terry Francois Street <br>
+                San Francisco, CA 94158
+            </div>
+            <div class="numbers">
+                Tel: 123-456-7890 <br>
+                Fax: 123-456-7890
+            </div>
+            <img src="images/pexels-joanne-xavier-7146232.jpg" alt="picture of red paper and flowers">
+        </div>
+    </section>
+    <section class="mail">
+        <div class="email-us" id="email-us">
+            <form>
+                <div class="form-div">
+                    <input type="text" id="fullname" placeholder="Jane Doe">
+                    <input type="email" id="email_id" placeholder="Jane@gmail.com">
+                </div>
+                <input type="text" id="subject" placeholder="Subject">
+                <input type="text" id="message" placeholder="Type your message">
+                <input type="submit" value="Send" id="send-button">
+            </form>
+
+            <!-- <form id="contact-form">
+                <label>Name</label>
+                <input type="text" name="name" id="name">
+                <label>Email</label>
+                <input type="email" name="email" id="email">
+                <label>Message</label>
+                <textarea name="message" id="text-area"></textarea>
+                <input type="submit" value="Send" id="send-button">
+            </form> -->
+        </div>
+        <div class="contact-us" id="contact-us">
+            <p class="section-head"><span class="big-letter">G</span>et in touch</p>
+            <p class="para">Please feel free to call, fax, or email us if you have any questions.</p>
+        </div>
+    </section>
+    <footer>
+        <div class="address">
+            500 Terry Francois Street <br>
+            San Francisco, CA 94158
+        </div>
+        <div class="contact-detailz">
+            Tel: 123-456-7890 <br>
+            Email: info@mysite.com
+        </div>
+        <div class="copyright">
+            © 2035 by Belle Weddings. <br>
+            Powered and secured by Wix
+        </div>
+        <button class="cta">Book a Consultation</button>
+        
+     </footer>
+
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('Rlzkpz7do8IJ7tYBN')
+</script>
+</body>
+</html>

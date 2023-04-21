@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: montserrat, sans-serif;
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: white ;
+    position: fixed;
+    z-index: 2;
+}
+
+label.logo{
+    float: left;
+    font-size: 30px;
+    font-style: italic;
+    line-height: 80px;
+    padding-left: 50px;
+}
+
+nav ul{
+    float: right;
+    padding-right: 50px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    
+}
+
+nav ul li a{
+    color: black;
+    font-size: 20px;
+    padding: 7px 10px;
+    border-radius: 10%;
+}
+
+a:hover,a.active{
+    background: blanchedalmond;
+    transition: .5s;
+}
+
+.checkbtn{
+    width: 16px;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 25px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+
+    .checkbtn{
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: burlywood;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 2;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    a:hover, a.active{
+        background: none;
+        color: blanchedalmond;
+        transition: .5s;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+
+.main img{
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0.8;
+}
+
+.main p{
+   position: absolute;
+   top: 45%;
+   left: 30%;
+   z-index: 1;
+}
+
+.intro{
+    color: white;
+    font-size: 60px;
+    font-style: italic;
+}
+.sub-intro{
+    color: white;
+    font-size: 20px;
+}
+
+/* services section */
+.services{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 8fr 8fr;
+    
+    /* height: 50vh; */
+}
+
+.service{
+    /* display: inline-block;
+    width: 40%; */
+    padding: 0 100px;
+}
+/*
+.img-background{
+    /* display: inline-block; */
+    /* background-color: blanchedalmond;
+    width: 300px; */
+
+    /* display: inline-block;
+    width: 1000px;
+    height: 600px;
+    margin-left: 100px;
+    background-color: blanchedalmond;
+    padding-top: 10px; 
+}*/
+
+.service-img{
+    width: 100%; 
+    /* height: 40%; */
+    padding-right: 100px;
+    
+}
+
+.big-letter{
+    font-size: 50px;
+    font-style: italic;
+}
+
+.section-head{
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.para{
+    font-family:  montserrat;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.packages{
+    margin: 20px 0;
+   
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.packages a{
+    font-style: italic;
+    font-size: 18px;
+    color: black;
+}
+
+/* gallery section styling */
+
+.gallery{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 8fr 8fr;
+    height: 100%;
+    /* height: 50vh; */
+}
+/* .img-background{
+    display: inline-block;
+    width: 50%;
+    background-color: blanchedalmond;
+} */
+
+.gallery-para{
+    /* display: inline-block;
+    width: 40%; */
+    padding-right: 100px;
+}
+
+.gallery-img{
+    width: 80%;
+    height: 75%;
+    padding-left: 100px;
+}
+
+/* testimonials section */
+.testimonials{
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 8fr 8fr;
+    /* height: 50vh; */
+}
+
+.testimonial-para{
+    padding: 0 100px;
+    height: 100%;
+}
+
+.testimonial-img{
+    width: 100%; 
+    padding-right: 100px;
+}
+
+/* Footer */
+/* Footer */
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+/* .address, .contact-details {
+    border-right: 1px solid burlywood;
+} */
+
+
+footer{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 30px;
+}
+
+.contact-details, .copyright{
+    padding-left: 40px;
+}
+
+button{
+    width: 200px;
+    margin-left: 50px;
+    color: black;
+    background-color: white;
+    font-style: italic;
+    border: 1px solid burlywood;
+}
+
+button:hover{
+    background-color: blanchedalmond;
+}
+
+/* smartphone responsiveness */
+@media screen and (max-width: 600px) {
+    main{
+        width: 100%;
+        padding-top: 180px;
+    }
+    .main img{
+        width: 100%;
+        height: 270px;
+        opacity: 0.8;
+        margin-top: 80px;
+    }
+
+    .main p{
+        position: absolute;
+        text-align: center;
+        top: 18%;
+        left: 8%;
+        z-index: 1;
+     }
+
+     .intro{
+        font-size: 40px;
+     }
+
+    .section-head, .para{
+        text-align: center;
+    }
+
+    .services{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 15px auto;
+        height: 100%;
+        width: 80%;
+    }
+
+    .service{
+        padding: 0;
+    }
+
+    .service-img{
+        width: 100%;
+        padding: 0;
+    }
+
+    .packages{
+        margin: 10px auto;
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 0;
+        margin: 0 auto;
+        width: 80%;
+        height: 100%;
+    }
+
+    .gallery-para{
+        padding-right: 0;
+    }
+
+    .gallery-img{
+        width: 100%;
+        height: 100%;
+        padding-left: 0;
+        margin: 0 auto;
+    }
+
+    /* changing the order of how image and paragraph are displayed */
+    img#gallery-img {order: 2;}
+    div#gallery-para {order: 1;}
+
+    .testimonials{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 15px auto;
+        width: 80%;
+        height: 100%;
+    }
+
+    .testimonial-para{
+        padding: 0;
+    }
+
+    .testimonial-img{
+        width: 100%;
+        padding: 0;
+    }
+
+    .name-surname{
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .contact-details, .copyright{
+        padding-left: 0px;
+    }
+
+    .address, .contact-details{
+        margin-bottom: 10px;
+    }
+
+    button{
+        margin: 20px auto;
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .main p{
+        position: absolute;
+        top: 20%;
+        left: 1%;
+        font-size: 18px;
+        font-style: italic;
+    }
+}
+
+/* Tablet responsiveness */
+@media screen and (max-width: 850px) {
+    main{
+        width: 100%;
+        padding-top: 180px;
+    }
+    .main img{
+        width: 100%;
+        height: 270px;
+        opacity: 0.8;
+        margin-top: 80px;
+    }
+
+    .main p{
+        position: absolute;
+        text-align: center;
+        top: 15%;
+        left: 25%;
+        z-index: 1;
+     }
+
+     .intro{
+        font-size: 50px;
+     }
+
+    .section-head, .para{
+        text-align: center;
+    }
+
+    .services{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 15px auto;
+        height: 100%;
+        width: 85%;
+    }
+
+    .service{
+        padding: 0;
+    }
+
+    .service-img{
+        width: 100%;
+        padding: 0;
+    }
+
+    .packages{
+        margin: 10px auto;
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 0;
+        margin: 0 auto;
+        width: 85%;
+        height: 100%;
+    }
+
+    .gallery-para{
+        padding-right: 0;
+    }
+
+    .gallery-img{
+        width: 100%;
+        height: 100%;
+        padding-left: 0;
+        margin: 0 auto;
+    }
+
+    /* changing the order of how image and paragraph are displayed */
+    img#gallery-img {order: 2;}
+    div#gallery-para {order: 1;}
+
+    .testimonials{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 15px auto;
+        width: 85%;
+        height: 100%;
+    }
+
+    .testimonial-para{
+        padding: 0;
+    }
+
+    .testimonial-img{
+        width: 100%;
+        padding: 0;
+    }
+
+    .name-surname{
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .contact-details, .copyright{
+        padding-left: 0px;
+    }
+
+    .address, .contact-details{
+        margin-bottom: 10px;
+    }
+
+    button{
+        margin: 20px auto;
+        padding: 10px 10px;
+    }
+    
+
+
+}
